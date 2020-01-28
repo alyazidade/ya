@@ -7,9 +7,10 @@ if(isset($_POST['submit'])){
   $nama = $_POST['nama'];
   $tanggal = $_POST['tanggal'];
   $jumlah = $_POST['jumlah'];
+  $satuan = $_POST['satuan'];
   $newimagename =  $time . '.' . end($temp);
 
-  $data = "'$nama', '$tanggal', '$jumlah'";
+  $data = "'$nama', '$tanggal', '$jumlah', '$satuan'";
   $tambah = $masuk->tambah($data);
   if ($tambah) {
     header("Location: admin.php?page=masuk&action=detail&id=".$tambah);
@@ -55,6 +56,24 @@ if(isset($_POST['submit'])){
               <label class="col-sm-2 col-form-label">Jumlah</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" name="jumlah" required>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Satuan</label>
+              <div class="col-sm-8">
+                <select class="form-control" name="satuan">
+                  <?php if($satuan == 'Kg') {?>
+                            <option selected>Kg</option>
+                        <?php }  else {?>
+                            <option selected>--- Pilih Satuan ---</option>
+                        <?php } ?>
+                       <option value="Kg">Kg</option>
+                       <option value="Lusin">Lusin</option>
+                       <option value="Dos">Dos</option>
+                       <option value="Karung">Karung</option>
+
+                </select>
               </div>
             </div>
 

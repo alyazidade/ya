@@ -14,7 +14,7 @@ $data = $posko->data();
       <div class="ibox ">
         <div class="ibox-content">
           <div class="table-responsive">
-            <a href="<?php echo $url.'admin.php?page=posko&action=tambah'; ?>" class="btn btn-primary"><i class="fa fa-plus"></i> <b>Tambah</b> </a>
+            <a href="admin.php?page=posko&action=tambah" class="btn btn-primary"><i class="fa fa-plus"></i> <b>Tambah</b> </a>
             <br>
             <br>
             <table class="table table-bordered table-hover dataTables-example" >

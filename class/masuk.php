@@ -41,7 +41,7 @@ class Masuk extends Koneksi {
 
   public function tambah($data)
   {
-    $query = "INSERT INTO masuk (nama, tanggal, jumlah) VALUES ($data)";
+    $query = "INSERT INTO masuk (nama, tanggal, jumlah, satuan) VALUES ($data)";
 
     $result = $this->connection->query($query);
     if ($result == false) {
