@@ -9,7 +9,7 @@ class kebutuhan extends Koneksi {
 
   public function data()
   {
-    $query = "SELECT * FROM kebutuhan JOIN tersedia JOIN posko WHERE kebutuhan.id_posko = tersedia.id_posko";
+    $query = "SELECT * FROM kebutuhan JOIN tersedia JOIN posko WHERE kebutuhan.nama_kebutuhan = tersedia.nama and kebutuhan.id_posko = posko.id_posko";
 
     $result = $this->connection->query($query);
     if ($result == false) {

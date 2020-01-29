@@ -93,7 +93,7 @@ class Keluar extends Koneksi {
 
   public function tambah($data)
   {
-    $query = "INSERT INTO keluar (id_posko, nama, tanggal, jumlah, satuan) VALUES ($data)";
+    $query = "INSERT INTO keluar (nama, tanggal, jumlah, satuan, id_posko) VALUES ($data)";
 
     $result = $this->connection->query($query);
     if ($result == false) {
